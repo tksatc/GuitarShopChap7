@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<h1>Welcome to the Guitar Shop!</h1>
+
+<p>Make yourself at home and check out some cool instruments.</p>
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="list-group">
+            <a asp-controller="Product" asp-action="List"
+               class="list-group-item">View our products</a>
+            <a asp-controller="Home" asp-action="About"
+               class="list-group-item">Learn more about us</a>
+        </div>
+    </div>
+</div>
+@{
+    var greeting = "Welcome!";
+    var weekDay = DateTime.Now.DayOfWeek;
+    var greetingMessage = greeting + " Hope you are having a great " + weekDay;
+}
+<!-- code expression -->
+<p>The greeting is: @greetingMessage</p>
+<table border="1">
+    <tr>
+        <th width="100px">Name</th>
+        <td width="100px">Value</td>
+    </tr>
+    <tr>
+        <td>Day</td>
+        <td>@DateTime.Now.Day</td>
+    </tr>
+    <tr>
+        <td>Hour</td>
+        <td>@DateTime.Now.Hour</td>
+    </tr>
+    <tr>
+        <td>Minute</td>
+        <td>@DateTime.Now.Minute</td>
+    </tr>
+    <tr>
+        <td>Second</td>
+        <td>@DateTime.Now.Second</td>
+    </tr>
+    </td>
+</table>
